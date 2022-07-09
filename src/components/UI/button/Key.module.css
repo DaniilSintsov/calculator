@@ -1,0 +1,18 @@
+.key {
+  cursor: pointer;
+  margin: 5px;
+  min-height: 50px;
+  border-radius: 20px;
+  color: var(--white);
+  font-size: 40px;
+  box-shadow: 0 0 2px var(--light-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-radius 0.1s;
+  position: relative;
+}
+
+.key:active {
+  border-radius: 5px;
+}
