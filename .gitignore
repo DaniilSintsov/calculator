@@ -9,7 +9,7 @@ package-lock.json
 /.vscode
 # testing
 /coverage
-
+/build
 # misc
 .DS_Store
 .env.local
