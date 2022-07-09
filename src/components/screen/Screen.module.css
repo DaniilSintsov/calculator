@@ -4,23 +4,25 @@
   padding: 10px 15px;
   min-height: 30%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   position: relative;
 }
 
-.screen::before {
+.screen::after {
   content: 'Клавиша % отвечает за нахождение остатка от деления';
-  position: absolute;
-  left: 15px;
-  bottom: 10px;
   font-size: 14px;
   color: var(--white);
 }
 
 .screen__text {
+  justify-content: flex-end;
+  align-self: flex-end;
+  max-width: 320px;
   flex-grow: 1;
+  display: flex;
+  align-items: center;
   text-align: right;
   font-size: 30px;
   font-weight: 400;

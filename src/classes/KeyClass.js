@@ -1,10 +1,11 @@
 export default class KeyClass {
   static onKeyNum(exp, setExp, item) {
+    console.log(exp.length)
     if (exp.length < 240) {
       if (exp.length && exp[0].length > 1) {
         setExp([exp.pop()])
       }
-      if (exp.length % 31 === 30) {
+      if (exp.length % 16 === 15) {
         setExp([...exp, item, ' '])
       } else {
         setExp([...exp, item])
@@ -15,7 +16,7 @@ export default class KeyClass {
   static onKeySign(exp, setExp, item) {
     if (exp.length < 240) {
       if (exp.length) {
-        if (exp.length % 31 === 30) {
+        if (exp.length % 16 === 15) {
           setExp([...exp, item, ' '])
         } else {
           setExp([...exp, item])
@@ -63,19 +64,19 @@ export default class KeyClass {
         exp[exp.length - 1] === '*' ||
         exp[exp.length - 1] === '/' ||
         exp[exp.length - 1] === '%') {
-        if (exp.length % 31 === 30) {
+        if (exp.length % 16 === 15) {
           setExp([...exp, '(', ' '])
         } else {
           setExp([...exp, '('])
         }
       } else if (exp.filter(item => item === '(').length > exp.filter(item => item === ')').length) {
-        if (exp.length % 31 === 30) {
+        if (exp.length % 16 === 15) {
           setExp([...exp, ')', ' '])
         } else {
           setExp([...exp, ')'])
         }
       } else {
-        if (exp.length % 31 === 30) {
+        if (exp.length % 16 === 15) {
           setExp([...exp, '(', ' '])
         } else {
           setExp([...exp, '('])
