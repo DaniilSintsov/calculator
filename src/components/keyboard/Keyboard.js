@@ -100,7 +100,7 @@ const Keyboard = ({expression, setExpression}) => {
       callback: (exp, setExp, item) => KeyClass.onKeyNum(exp, setExp, item)
     },
     {
-      symbol: '🠐',
+      symbol: 'DEL',
       styles: {backgroundColor: 'var(--blue)'},
       callback: (exp, setExp) => KeyClass.onKeyDelete(exp, setExp)
     },
