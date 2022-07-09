@@ -1,6 +1,5 @@
 export default class KeyClass {
   static onKeyNum(exp, setExp, item) {
-    console.log(exp.length)
     if (exp.length < 240) {
       if (exp.length && exp[0].length > 1) {
         setExp([exp.pop()])
